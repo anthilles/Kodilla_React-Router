@@ -3,6 +3,7 @@ export const GET_COUNTRY = 'GET_COUNTRY'; // info o 1 państwie
 export const DELETE_COUNTRY = 'DELETE_COUNTRY'; // usuwanie
 export const SEARCH_COUNTRY = 'SEARCH_COUNTRY'; // po nazwie
 export const SET_CONTINENT = 'SET_CONTINENT'; // państwa kontynentu
+export const SEARCH_COUNTRIES = 'SEARCH_COUNTRIES'; // po nazwie
 
 // listowanie państw
 export function getCountries() {
@@ -33,6 +34,13 @@ export function getCountry(id) {
 export function searchCountry(searchText) {
     return {
         type: SEARCH_COUNTRY,
+        searchText
+    }
+}
+
+export function searchCountries(searchText) {
+    return {
+        type: SEARCH_COUNTRIES,
         searchText
     }
 }
